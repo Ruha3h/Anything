@@ -4,7 +4,6 @@ using NAudio.Wave;
 
 namespace Pianino
 {
-
     public class Buffer : object
     {
         public Buffer(ConsoleKey key)
@@ -14,72 +13,8 @@ namespace Pianino
 
         public ConsoleKey key;
     }
-
     static class Pianino
     {
-        public static double[] Octaves ={
-            261.6256,
-            277.1826,
-            293.6648,
-            311.127,
-            329.6276,
-            349.2282,
-            369.9944,
-            391.9954,
-            415.3047,
-            440,
-            466.1638,
-            493.8833,
-            523.2511,
-            554.3653,
-            587.3295,
-            622.254,
-            659.2551,
-            698.4565,
-            739.9888,
-            783.9909,
-            830.6094,
-            880,
-            932.3275,
-            987.7666,
-            1046.502,
-            1108.731,
-            1174.659,
-            1244.508,
-            1318.51,
-            1396.913,
-            1479.978,
-            1567.982,
-            1661.219,
-            1760,
-            1864.655,
-            1975.533,
-            2093.005,
-            2217.461,
-            2349.318,
-            2489.016,
-            2637.02,
-            2793.826,
-            2959.955,
-            3135.963,
-            3322.438,
-            3520,
-            3729.31,
-            3951.066,
-            4186.009,
-            4434.922,
-            4698.636,
-            4978.032,
-            5274.041,
-            5587.652,
-            5919.911,
-            6271.927,
-            6644.875,
-            7040,
-            7458.62,
-            7902.133,
-        };
-
         public class PAudio
         {
             private AudioFileReader audioFile;
@@ -115,7 +50,6 @@ namespace Pianino
                 return Path;
             }
         }
-
         public static PAudio[] OctavesPath = new PAudio[] {
             new PAudio("Piano\\C4.wav"),
             new PAudio("Piano\\C#4.wav"),
@@ -230,28 +164,16 @@ namespace Pianino
             }
             return -1;
         }
-
-        public static void PlayNoteAsBeep(int Index)
-        {
-            if (Index != -1) Console.Beep(Convert.ToInt32(Octaves[Index]), 200);
-        }
-
         public static void PlayNoteAsSound(object Index)
         {
             if (Convert.ToInt32(Index) != -1)
             {
                 OctavesPath[Convert.ToInt32(Index)].Play();
-               
             }
         }
-
     }
-
-   
-
     class Program
     {
-       
         static void Action(object keyBuffer)
         {
             Buffer temp = keyBuffer as Buffer;
@@ -259,10 +181,8 @@ namespace Pianino
 
             Pianino.PlayNoteAsSound(NoteIndex);
         }
-        static void Main(string[] args)
+        static void Main()
         {
-            //Pianino.PlayNoteAsSound(10);
-
             while (true)
             {
                 new Thread(Action).Start(new Buffer(Console.ReadKey(true).Key));
