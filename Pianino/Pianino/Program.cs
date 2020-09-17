@@ -80,43 +80,79 @@ namespace Pianino
             7902.133,
         };
 
-        public static string[] OctavesPath = new string[] {
-            "C4",
-            "C#4",
-            "D4",
-            "D#4",
-            "E4",
-            "F4",
-            "F#4",
-            "G4",
-            "G#4",
-            "A4",
-            "A#4",
-            "B4",
-            "C5",
-            "C#5",
-            "D5",
-            "D#5",
-            "E5",
-            "F5",
-            "F#5",
-            "G5",
-            "G#5",
-            "A5",
-            "A#5",
-            "B5",
-             "C6",
-            "C#6",
-            "D6",
-            "D#6",
-            "E6",
-            "F6",
-            "F#6",
-            "G6",
-            "G#6",
-            "A6",
-            "A#6",
-            "B6",
+        public class PAudio
+        {
+            private AudioFileReader audioFile;
+            private WaveOutEvent waveOutEvent = new WaveOutEvent();
+            string Path;
+
+            public PAudio(string AudioPath)
+            {
+                audioFile = new AudioFileReader(AudioPath);
+                Path = AudioPath;
+            }
+
+            ~PAudio()
+            {
+                waveOutEvent.Dispose();
+                audioFile.Dispose();
+            }
+
+            public void Play()
+            {
+                waveOutEvent.Stop();
+                audioFile.CurrentTime = TimeSpan.Zero;
+                waveOutEvent.Init(audioFile);
+                waveOutEvent.Play();
+                while (waveOutEvent.PlaybackState == PlaybackState.Playing)
+                {
+                    Thread.Sleep(1000);
+                }
+            }
+
+            public override string ToString()
+            {
+                return Path;
+            }
+        }
+
+        public static PAudio[] OctavesPath = new PAudio[] {
+            new PAudio("Piano\\C4.wav"),
+            new PAudio("Piano\\C#4.wav"),
+            new PAudio("Piano\\D4.wav"),
+            new PAudio("Piano\\D#4.wav"),
+            new PAudio("Piano\\E4.wav"),
+            new PAudio("Piano\\F4.wav"),
+            new PAudio("Piano\\F#4.wav"),
+            new PAudio("Piano\\G4.wav"),
+            new PAudio("Piano\\G#4.wav"),
+            new PAudio("Piano\\A4.wav"),
+            new PAudio("Piano\\A#4.wav"),
+            new PAudio("Piano\\B4.wav"),
+            new PAudio("Piano\\C5.wav"),
+            new PAudio("Piano\\C#5.wav"),
+            new PAudio("Piano\\D5.wav"),
+            new PAudio("Piano\\D#5.wav"),
+            new PAudio("Piano\\E5.wav"),
+            new PAudio("Piano\\F5.wav"),
+            new PAudio("Piano\\F#5.wav"),
+            new PAudio("Piano\\G5.wav"),
+            new PAudio("Piano\\G#5.wav"),
+            new PAudio("Piano\\A5.wav"),
+            new PAudio("Piano\\A#5.wav"),
+            new PAudio("Piano\\B5.wav"),
+            new PAudio("Piano\\C6.wav"),
+            new PAudio("Piano\\C#6.wav"),
+            new PAudio("Piano\\D6.wav"),
+            new PAudio("Piano\\D#6.wav"),
+            new PAudio("Piano\\E6.wav"),
+            new PAudio("Piano\\F6.wav"),
+            new PAudio("Piano\\F#6.wav"),
+            new PAudio("Piano\\G6.wav"),
+            new PAudio("Piano\\G#6.wav"),
+            new PAudio("Piano\\A6.wav"),
+            new PAudio("Piano\\A#6.wav"),
+            new PAudio("Piano\\B6.wav")
         };
         public static int GetNote(ConsoleKey key)
         {
@@ -204,30 +240,18 @@ namespace Pianino
         {
             if (Convert.ToInt32(Index) != -1)
             {
-                Console.WriteLine("Piano\\" + OctavesPath[Convert.ToInt32(Index)] + ".waw");
-                using (var audioFile = new AudioFileReader(@"C:\Piano\" + OctavesPath[Convert.ToInt32(Index)] + ".wav"))
-                {
-                    Console.WriteLine("\tStep1");
-                    using (var outputDevice = new WaveOutEvent())
-                    {
-                        Console.WriteLine("\t\tStep2");
-                        outputDevice.Init(audioFile);
-                        outputDevice.Play();
-                        while (outputDevice.PlaybackState == PlaybackState.Playing)
-                        {
-                            Console.WriteLine($"\t\t\t - {Index} - {Thread.CurrentThread.GetHashCode()} -");
-                            Thread.Sleep(5000);
-                        }
-                    }
-                }
+                OctavesPath[Convert.ToInt32(Index)].Play();
+               
             }
         }
+
     }
 
    
 
     class Program
     {
+       
         static void Action(object keyBuffer)
         {
             Buffer temp = keyBuffer as Buffer;
