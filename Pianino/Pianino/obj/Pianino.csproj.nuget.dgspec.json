@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ruhlan\\source\\repos\\Pianino\\Pianino\\Pianino.csproj": {}
+    "C:\\Users\\Ruhlan\\source\\repos\\ToGit\\Pianino\\Pianino\\Pianino.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ruhlan\\source\\repos\\Pianino\\Pianino\\Pianino.csproj": {
+    "C:\\Users\\Ruhlan\\source\\repos\\ToGit\\Pianino\\Pianino\\Pianino.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ruhlan\\source\\repos\\Pianino\\Pianino\\Pianino.csproj",
+        "projectUniqueName": "C:\\Users\\Ruhlan\\source\\repos\\ToGit\\Pianino\\Pianino\\Pianino.csproj",
         "projectName": "Pianino",
-        "projectPath": "C:\\Users\\Ruhlan\\source\\repos\\Pianino\\Pianino\\Pianino.csproj",
+        "projectPath": "C:\\Users\\Ruhlan\\source\\repos\\ToGit\\Pianino\\Pianino\\Pianino.csproj",
         "packagesPath": "C:\\Users\\Ruhlan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ruhlan\\source\\repos\\Pianino\\Pianino\\obj\\",
+        "outputPath": "C:\\Users\\Ruhlan\\source\\repos\\ToGit\\Pianino\\Pianino\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

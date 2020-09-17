@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "yW9goEf6s9IaUhG94rjogK7YQW38gjDpfLi62i2CXJqNOelawRW6eg75B0+1Ak/YZEzXLYiWrzexGWOKNxUnrQ==",
+  "dgSpecHash": "6u8/nNYaw25H21urGECoeLXnuQy3XaB2ZbNxMnUrBlLSvXZ0hvkJ6Q+brQPW2nwQcSY6E3vL7W9J6TLu9SOsKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ruhlan\\source\\repos\\Pianino\\Pianino\\Pianino.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Ruhlan\\source\\repos\\ToGit\\Pianino\\Pianino\\Pianino.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\naudio\\1.10.0\\naudio.1.10.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.resources.extensions\\4.7.0\\system.resources.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
