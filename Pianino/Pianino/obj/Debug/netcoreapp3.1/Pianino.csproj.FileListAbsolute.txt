@@ -1,0 +1,13 @@
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\bin\Debug\netcoreapp3.1\Pianino.exe
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\bin\Debug\netcoreapp3.1\Pianino.deps.json
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\bin\Debug\netcoreapp3.1\Pianino.runtimeconfig.json
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\bin\Debug\netcoreapp3.1\Pianino.runtimeconfig.dev.json
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\bin\Debug\netcoreapp3.1\Pianino.dll
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\bin\Debug\netcoreapp3.1\Pianino.pdb
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.csprojAssemblyReference.cache
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.csproj.CoreCompileInputs.cache
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.AssemblyInfoInputs.cache
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.AssemblyInfo.cs
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.dll
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.pdb
+C:\Users\Ruhlan\source\repos\Pianino\Pianino\obj\Debug\netcoreapp3.1\Pianino.genruntimeconfig.cache
